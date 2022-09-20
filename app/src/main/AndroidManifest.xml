@@ -17,10 +17,7 @@
             android:name=".ActivityInicio"
             android:exported="false" />
         <activity
-            android:name=".Inicio"
-            android:exported="false" />
-        <activity
-            android:name=".ActivityBemVindo"
+            android:name=".ActivityCadastro"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

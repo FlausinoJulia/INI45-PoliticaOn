@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/verde_titulo"
+    tools:context=".ActivityCadastro">
+
+    <LinearLayout
+        android:layout_width="316dp"
+        android:layout_height="547dp"
+        android:background="@drawable/shape_cadastro_card"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:text="Crie sua conta"
+            android:textColor="@color/cinza_claro"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtNome"
+            android:layout_width="267dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:text="Nome"
+            android:textColor="@color/white"
+            android:background="#20F5F5F5" />
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="267dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:text="Email"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/edtSenha"
+            android:layout_width="267dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:text="Senha"
+            android:textColor="@color/white" />
+
+        <!-- programar depois para ele ser daqueles de selecionar-->
+        <EditText
+            android:id="@+id/edtEstado"
+            android:layout_width="267dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:text="Selecione seu estado"
+            android:textColor="@color/white"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/btnCadastro"
+            android:layout_width="150dp"
+            android:layout_height="61dp"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_forms_btn"
+            android:text="Cadastrar"
+            android:textAlignment="center"
+            android:textSize="18dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Já é cadastrado? Faça login."
+            android:textSize="14dp"
+            android:textColor="#EFEFEF"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

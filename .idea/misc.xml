@@ -12,9 +12,20 @@
         <entry key="..\:/Users/u21241/AndroidStudioProjects/PoliticaOn/app/src/main/res/layout/activity_inicio.xml" value="0.25" />
         <entry key="..\:/Users/u21241/AndroidStudioProjects/PoliticaOn/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/u21241/AndroidStudioProjects/PoliticaOn/app/src/main/res/layout/card_noticia.xml" value="0.33" />
-        <entry key="..\:/Users/u21241/Documents/Projetos/Repositorios/INI45/PoliticaOn/app/src/main/res/layout/activity_bem_vindo.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/u21241/Documents/Projetos/Repositorios/INI45/PoliticaOn/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.213" />
+        <entry key="..\:/Users/u21241/Documents/Projetos/Repositorios/INI45/PoliticaOn/app/src/main/res/drawable/button_border.xml" value="0.1285" />
+        <entry key="..\:/Users/u21241/Documents/Projetos/Repositorios/INI45/PoliticaOn/app/src/main/res/drawable/ic_launcher_background.xml" value="0.213" />
+        <entry key="..\:/Users/u21241/Documents/Projetos/Repositorios/INI45/PoliticaOn/app/src/main/res/drawable/shape_app_card_cadastro.xml" value="0.213" />
+        <entry key="..\:/Users/u21241/Documents/Projetos/Repositorios/INI45/PoliticaOn/app/src/main/res/drawable/shape_app_fundo_degrade.xml" value="0.213" />
+        <entry key="..\:/Users/u21241/Documents/Projetos/Repositorios/INI45/PoliticaOn/app/src/main/res/drawable/shape_cadastro_btn.xml" value="0.213" />
+        <entry key="..\:/Users/u21241/Documents/Projetos/Repositorios/INI45/PoliticaOn/app/src/main/res/drawable/shape_cadastro_card.xml" value="0.213" />
+        <entry key="..\:/Users/u21241/Documents/Projetos/Repositorios/INI45/PoliticaOn/app/src/main/res/drawable/shape_forms_btn.xml" value="0.213" />
+        <entry key="..\:/Users/u21241/Documents/Projetos/Repositorios/INI45/PoliticaOn/app/src/main/res/layout/activity_bem_vindo.xml" value="0.21183206106870228" />
+        <entry key="..\:/Users/u21241/Documents/Projetos/Repositorios/INI45/PoliticaOn/app/src/main/res/layout/activity_cadastro.xml" value="0.2683982683982684" />
         <entry key="..\:/Users/u21241/Documents/Projetos/Repositorios/INI45/PoliticaOn/app/src/main/res/layout/activity_inicio.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/u21241/Documents/Projetos/Repositorios/INI45/PoliticaOn/app/src/main/res/layout/activity_welcome.xml" value="0.26851851851851855" />
         <entry key="..\:/Users/u21241/Documents/Projetos/Repositorios/INI45/PoliticaOn/app/src/main/res/layout/card_noticia.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/u21241/Documents/Projetos/Repositorios/INI45/PoliticaOn/app/src/main/res/layout/form_btn.xml" value="0.2676923076923077" />
       </map>
     </option>
   </component>
