@@ -1,6 +1,7 @@
 package br.unicamp.politicaon;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 
 import android.view.View;
@@ -20,8 +21,7 @@ public class ActivityCadastro extends AppCompatActivity {
         setContentView(R.layout.activity_cadastro);
 
         // associamos aos componetes do xml
-        btnCadastro = findViewById(R.id.btnCadastro);
-
+        btnCadastro = (Button) findViewById(R.id.btnCadastro);
 
         // on click do btnCadastro
         btnCadastro.setOnClickListener(new View.OnClickListener() {
