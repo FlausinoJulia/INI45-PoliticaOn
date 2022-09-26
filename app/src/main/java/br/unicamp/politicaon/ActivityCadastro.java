@@ -2,14 +2,11 @@ package br.unicamp.politicaon;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
-import java.sql.Connection;
 
 public class ActivityCadastro extends AppCompatActivity {
 

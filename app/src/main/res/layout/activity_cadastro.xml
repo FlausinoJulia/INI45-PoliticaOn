@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#009846"
+    android:background="@color/verde_titulo"
     tools:context=".ActivityCadastro">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <!-- programar depois para ele ser daqueles de selecionar-->
+
         <TextView
             android:id="@+id/tvTitulo"
             android:layout_width="wrap_content"
@@ -36,7 +36,7 @@
             android:layout_width="267dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="52dp"
             android:background="@drawable/shape_edt_cadastro"
             android:hint="Nome"
             android:padding="10dp"
@@ -52,7 +52,7 @@
             android:layout_width="267dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/shape_edt_cadastro"
             android:hint="Email"
             android:padding="10dp"
@@ -68,7 +68,7 @@
             android:layout_width="267dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/shape_edt_cadastro"
             android:hint="Estado"
             android:padding="10dp"
@@ -85,12 +85,11 @@
             android:layout_width="267dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="20dp"
+            android:text="Senha"
             android:background="@drawable/shape_edt_cadastro"
-            android:hint="Senha"
             android:padding="10dp"
             android:textColor="@color/white"
-            android:textColorHint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.51"
             app:layout_constraintStart_toStartOf="parent"
@@ -101,7 +100,7 @@
             android:layout_width="147dp"
             android:layout_height="61dp"
             android:layout_gravity="center"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="68dp"
             android:background="@drawable/shape_forms_btn"
             android:text="Cadastrar"
             android:textAlignment="center"
@@ -115,7 +114,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_marginBottom="16dp"
             android:text="Já é cadastrado? Faça login."
             android:textColor="#EFEFEF"
@@ -123,7 +121,5 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
