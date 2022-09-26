@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- drawable/formlogin.xml -->
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="316dp"
+    android:height="547dp"
+    android:viewportWidth="316"
+    android:viewportHeight="547"
+    >
+
+    <group>
+
+        <clip-path
+            android:pathData="M12 0H304C310.627 0 316 5.37258 316 12V535C316 541.627 310.627 547 304 547H12C5.37258 547 0 541.627 0 535V12C0 5.37258 5.37258 0 12 0Z"
+            />
+
+        <path
+            android:pathData="M0 0V547H316V0"
+            android:fillColor="#046531"
+            />
+
+    </group>
+
+</vector>
