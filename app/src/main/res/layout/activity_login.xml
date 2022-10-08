@@ -39,42 +39,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.495" />
 
-
-    <!-- CaixEmail -->
-    <View
-        android:id="@+id/caixemail2"
-        android:layout_width="312dp"
-        android:layout_height="37dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/caixaemail"
-        app:layout_constraintBottom_toBottomOf="@+id/login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.512" />
-
-    <!-- CaixaSenha -->
-
-    <View
-        android:id="@+id/caixasenha"
-        android:layout_width="312dp"
-        android:layout_height="37dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/caixasenha"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.409" />
-
     <!-- Bem vindo de volta! -->
 
     <TextView
@@ -98,9 +62,11 @@
         android:layout_height="48dp"
         android:backgroundTint="@color/white"
         android:hint="Senha"
+        android:background="@drawable/shape_edt"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="17dp"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -116,6 +82,8 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="17dp"
+        android:padding="10dp"
+        android:background="@drawable/shape_edt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -123,6 +91,8 @@
         app:layout_constraintVertical_bias="0.402" />
 
     <TextView
+        android:id="@+id/tvCadastro"
+        android:textAlignment="center"
         android:layout_width="277dp"
         android:layout_height="36dp"
         android:text="Não é cadastrado? Crie uma conta."
@@ -132,7 +102,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.897" />
+        app:layout_constraintVertical_bias="0.9" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/rectangle_2"
@@ -142,7 +112,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/rectangle_2"
+        android:textSize="18dp"
+        android:background="@drawable/shape_forms_btn"
         android:text="ENTRAR"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/login"

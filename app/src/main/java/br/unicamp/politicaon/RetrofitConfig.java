@@ -4,9 +4,9 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 // configurar o retrofit
-public class RetrofitConfig
-{
-    private static final String URL = "http://localhost:3000/usuarios/";
+public class RetrofitConfig {
+
+    private static final String URL = "http://192.168.0.11:3000/usuarios/";
     private static Retrofit retrofit;
 
     public static Retrofit getRetrofitInstance()
