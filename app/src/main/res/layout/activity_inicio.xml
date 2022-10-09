@@ -26,18 +26,55 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/viewDestaque"
             android:layout_width="311dp"
             android:layout_height="140dp"
             android:layout_marginTop="20dp"
-            android:background="#29A84D"
             android:orientation="vertical"
+            android:background="@drawable/shape_radius"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvLogo">
+            app:layout_constraintTop_toBottomOf="@+id/tvLogo" >
 
-        </LinearLayout>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/view_destaque"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:shapeAppearanceOverlay="@style/roundedImageView"
+                />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="157dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="128dp"
+                android:layout_marginTop="36dp"
+                android:text="Confira as atividades dos seus candidatos"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="114dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="152dp"
+                android:layout_marginTop="88dp"
+                android:background="@drawable/shape_btn_azul"
+                android:padding="0dp"
+                android:text="Ver Atividades"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
             android:id="@+id/tvNoticias"
