@@ -2,31 +2,51 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardNoticia"
         android:layout_width="311dp"
         android:layout_height="140dp"
-        card_view:cardCornerRadius="7dp"
-        card_view:cardBackgroundColor="@color/verde_titulo"
+        app:cardCornerRadius="7dp"
+        app:cardBackgroundColor="@color/verde_titulo"
         android:layout_marginBottom="20dp" >
+
+        <ImageView
+            android:id="@+id/imagemNoticia"
+            android:layout_weight="1"
+            android:src="@drawable/not_available"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ImageView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="79.22dp"
-            card_view:cardBackgroundColor="@color/cinza_claro"
+            android:layout_height="100dp"
+            app:cardBackgroundColor="@color/cinza_claro"
             android:layout_gravity="bottom">
 
             <TextView
+                android:id="@+id/tvTituloNoticia"
                 android:layout_width="283dp"
                 android:layout_height="wrap_content"
-                android:maxHeight="51.22dp"
                 android:layout_gravity="center"
-                android:text="texto texto texto texto texto texto texto texto texto texto texto texto texto texto">
+                android:maxHeight="51.22dp"
+                android:text="titulo">
 
             </TextView>
+
+            <TextView
+                android:id="@+id/tvFonteNoticia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:text="fonte"/>
+
+
         </androidx.cardview.widget.CardView>
 
     </androidx.cardview.widget.CardView>
