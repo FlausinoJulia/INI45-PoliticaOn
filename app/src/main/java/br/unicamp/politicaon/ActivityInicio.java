@@ -75,7 +75,5 @@ public class ActivityInicio extends AppCompatActivity implements SelectListener,
         dialog.setTitle("Getting news of" + category);
         dialog.show();
         RequestManager manager = new RequestManager(this);
-        // manager.getNewsHeadlines(listener, category, null);
-
     }
 }

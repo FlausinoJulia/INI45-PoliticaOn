@@ -17,6 +17,6 @@
     <!-- ImageView com bordas arredondadas -->
     <style name="roundedImageView" parent="">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">7dp</item>
+        <item name="cornerSize">10dp</item>
     </style>
 </resources>
