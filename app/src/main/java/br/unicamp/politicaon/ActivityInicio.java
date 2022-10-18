@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -16,7 +17,7 @@ import br.unicamp.politicaon.Models.NewsHeadLines;
 
 import java.util.List;
 
-public class ActivityInicio extends AppCompatActivity implements SelectListener, View.OnClickListener {
+public class ActivityInicio extends AppCompatActivity implements SelectListener {
 
     RecyclerView recyclerView;
     CustomAdapter adapter;
@@ -26,7 +27,7 @@ public class ActivityInicio extends AppCompatActivity implements SelectListener,
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
-        dialog= new ProgressDialog(this);
+        dialog = new ProgressDialog(this);
         dialog.setTitle("Buscando notícias recentes");
         dialog.show();
 
@@ -39,9 +40,9 @@ public class ActivityInicio extends AppCompatActivity implements SelectListener,
             new OnFetchDataListener<NewsApiResponse>() {
                 @Override
                 public void onFetchData(List<NewsHeadLines> list, String message) {
-                    if(list.isEmpty()){
+                    if (list.isEmpty()) {
                         Toast.makeText(ActivityInicio.this, "Sem notícias encontradas", Toast.LENGTH_LONG).show();
-                    }else{
+                    } else {
                         showNews(list);
                         dialog.dismiss();
                     }
@@ -67,13 +68,12 @@ public class ActivityInicio extends AppCompatActivity implements SelectListener,
                 .putExtra("data", headlines));
     }
 
-
     @Override
-    public void onClick(View view) {
-        Button button= (Button) view;
-        String category=button.getText().toString();
-        dialog.setTitle("Getting news of" + category);
-        dialog.show();
-        RequestManager manager = new RequestManager(this);
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        // inflate para transformar o xml do menu em uma view
+        // getMenuInflater().inflate();
+
+        return super.onCreateOptionsMenu(menu);
     }
 }
