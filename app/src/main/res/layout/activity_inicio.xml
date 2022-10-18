@@ -9,8 +9,20 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/cinza_claro">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/menu_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:menu="@menu/menu_horizontal"
+            android:background="@color/verde_titulo"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="@color/white"/>
 
         <TextView
             android:id="@+id/tvLogo"
@@ -102,19 +114,6 @@
 
         </androidx.recyclerview.widget.RecyclerView>
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/menu_horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:menu="@menu/menu_horizontal"
-            android:background="@color/verde_titulo"
-            app:itemIconTint="@color/white"
-            app:itemTextColor="@color/white"/>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </ScrollView>

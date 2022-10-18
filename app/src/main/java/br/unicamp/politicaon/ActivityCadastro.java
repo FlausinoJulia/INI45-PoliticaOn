@@ -6,7 +6,6 @@ import androidx.appcompat.widget.AppCompatButton;
 import android.content.Intent;
 import android.os.Bundle;
 
-import android.telecom.Call;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -44,7 +43,7 @@ public class ActivityCadastro extends AppCompatActivity {
             public void onClick(View view)
             {
                 if (edtNome.getText().toString().isEmpty() && edtEmail.getText().toString().isEmpty() &&
-                    edtSenha.getText().toString().isEmpty())
+                        edtSenha.getText().toString().isEmpty())
                 {
                     Toast.makeText(ActivityCadastro.this, "Preencha todos os campos obrigatórios", Toast.LENGTH_LONG).show();
                     return;
