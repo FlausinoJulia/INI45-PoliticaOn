@@ -45,4 +45,8 @@ dependencies {
 
     // api news
     implementation 'com.squareup.picasso:picasso:2.8' // biblioteca picasso para mexer com imagens
+
+    // para navegação no app
+    implementation 'androidx.navigation:navigation-fragment:2.5.2'
+    implementation 'androidx.navigation:navigation-ui:2.5.2'
 }

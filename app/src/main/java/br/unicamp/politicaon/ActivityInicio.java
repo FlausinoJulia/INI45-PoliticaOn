@@ -1,16 +1,20 @@
 package br.unicamp.politicaon;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import br.unicamp.politicaon.Models.NewsApiResponse;
 import br.unicamp.politicaon.Models.NewsHeadLines;
@@ -22,6 +26,7 @@ public class ActivityInicio extends AppCompatActivity implements SelectListener 
     RecyclerView recyclerView;
     CustomAdapter adapter;
     ProgressDialog dialog;
+    BottomNavigationView menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +38,6 @@ public class ActivityInicio extends AppCompatActivity implements SelectListener 
 
         RequestManager manager = new RequestManager(this);
         manager.getNewsHeadlines(listener, "eleicoes");
-
     }
 
     private final OnFetchDataListener<NewsApiResponse> listener =
@@ -69,11 +73,30 @@ public class ActivityInicio extends AppCompatActivity implements SelectListener 
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-        // inflate para transformar o xml do menu em uma view
-        // getMenuInflater().inflate();
+        switch (item.getItemId())
+        {
+            case R.id.aprender:
 
-        return super.onCreateOptionsMenu(menu);
+                // Intent intent1 = new Intent(ActivityInicio.this, ActivityAprender.class);
+                // startActivity(intent1);
+
+                break;
+            case R.id.conhecer:
+
+                Intent intent2 = new Intent(ActivityInicio.this, ActivityConhecerCandidatos.class);
+                startActivity(intent2);
+
+                break;
+            case R.id.monitorar:
+
+                // Intent intent3 = new Intent(ActivityInicio.this, ActivityPainelDeMonitoramento.class);
+                // startActivity(intent3);
+
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
