@@ -9,14 +9,12 @@ import android.widget.TextView;
 
 public class ActivityLogin extends AppCompatActivity {
 
-    TextView tvCadastro;
+    TextView tvCadastro = findViewById(R.id.tvCadastro);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-        tvCadastro = findViewById(R.id.tvCadastro);
 
         tvCadastro.setOnClickListener(new View.OnClickListener() {
             @Override
