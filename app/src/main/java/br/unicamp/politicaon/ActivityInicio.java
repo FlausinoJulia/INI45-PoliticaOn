@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 import br.unicamp.politicaon.Models.NewsApiResponse;
 import br.unicamp.politicaon.Models.NewsHeadLines;
@@ -38,6 +39,36 @@ public class ActivityInicio extends AppCompatActivity implements SelectListener 
 
         RequestManager manager = new RequestManager(this);
         manager.getNewsHeadlines(listener, "eleicoes");
+
+        menu = findViewById(R.id.menu);
+
+        menu.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch(item.getItemId())
+                {
+                    case R.id.aprender:
+
+                      //  Intent intent1 = new Intent(ActivityInicio.this, ActivityAprender.class)
+
+                        break;
+                    case R.id.conhecer:
+
+                        Intent intent2 = new Intent(ActivityInicio.this, ActivityConhecerCandidatos.class);
+                        startActivity(intent2);
+
+                        break;
+                    case R.id.monitorar:
+
+                        // Intent intent3 = new Intent(ActivityInicio.this, ActivityPainelDeMonitoramento.class);
+                        // startActivity(intent3);
+
+                        break;
+                }
+                return true;
+            }
+        });
     }
 
     private final OnFetchDataListener<NewsApiResponse> listener =
@@ -70,33 +101,5 @@ public class ActivityInicio extends AppCompatActivity implements SelectListener 
     public void OnNewsClicked(NewsHeadLines headlines) {
         startActivity(new Intent(ActivityInicio.this, DetailsActivity.class)
                 .putExtra("data", headlines));
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        switch (item.getItemId())
-        {
-            case R.id.aprender:
-
-                // Intent intent1 = new Intent(ActivityInicio.this, ActivityAprender.class);
-                // startActivity(intent1);
-
-                break;
-            case R.id.conhecer:
-
-                Intent intent2 = new Intent(ActivityInicio.this, ActivityConhecerCandidatos.class);
-                startActivity(intent2);
-
-                break;
-            case R.id.monitorar:
-
-                // Intent intent3 = new Intent(ActivityInicio.this, ActivityPainelDeMonitoramento.class);
-                // startActivity(intent3);
-
-                break;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }

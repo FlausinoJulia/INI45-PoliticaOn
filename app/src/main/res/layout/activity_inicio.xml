@@ -14,7 +14,7 @@
         android:background="@color/cinza_claro">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/menu_horizontal"
+            android:id="@+id/menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:menu="@menu/menu_horizontal"
