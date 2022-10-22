@@ -21,7 +21,6 @@ public class ActivityCadastro extends AppCompatActivity {
     AppCompatButton btnCadastro;
     EditText edtNome, edtEmail, edtSenha;
     TextView tvLogin;
-    String nome, email, senha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,10 +63,10 @@ public class ActivityCadastro extends AppCompatActivity {
 
     private void cadastrarUsuario()
     {
-        nome = edtNome.getText().toString();
-        senha = edtSenha.getText().toString();
+        String nome = edtNome.getText().toString();
+        String senha = edtSenha.getText().toString();
         int idEstado = 13; // estado de teste
-        email = edtEmail.getText().toString();
+        String email = edtEmail.getText().toString();
 
         Usuario user = new Usuario(nome, senha, idEstado, email);
         UsuarioService service = RetrofitConfig.getRetrofitInstance().create(UsuarioService.class);
@@ -78,10 +77,11 @@ public class ActivityCadastro extends AppCompatActivity {
             public void onResponse(Call<Usuario> call, Response<Usuario> response) {
 
                 if (response.code() == 400)
-                    Toast.makeText(ActivityCadastro.this, "Esse email já está cadastrado", Toast.LENGTH_LONG).show();
+                    // verificar se funciona o response.message
+                    Toast.makeText(ActivityCadastro.this, response.message(), Toast.LENGTH_LONG).show();
                 else {
-                    Toast.makeText(ActivityCadastro.this, "Usuário adicionado", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(ActivityCadastro.this, ActivityInicio.class);
+                    Toast.makeText(ActivityCadastro.this, "Cadastro realizado!", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(ActivityCadastro.this, ActivityLogin.class);
                     startActivity(intent);
                 }
             }

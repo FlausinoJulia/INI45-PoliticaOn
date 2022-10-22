@@ -24,6 +24,10 @@ public interface UsuarioService
     @POST("/usuarios")
     Call<Usuario> adicionarUsuario(@Body Usuario usuario);
 
+    // login de um usuario
+    @POST("/usuarios/login")
+    Call<Usuario> logarUsuario(@Body Usuario usuario);
+
     // alterar os dados de um usuario
     @PUT("/usuarios/{id}")
     Call<Usuario> atualizarUsuario(@Path("id") int id, @Body Usuario usuario);
