@@ -45,7 +45,8 @@ public class ActivityInicio extends AppCompatActivity implements SelectListener 
         Intent intent = getIntent();
         idDoUsuario = intent.getIntExtra("idDoUsuario", -1);
 
-        Toast.makeText(this, idDoUsuario, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, idDoUsuario + "", Toast.LENGTH_SHORT).show();
+
         menu = findViewById(R.id.menu_horizontal);
 
         menu.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
@@ -56,14 +57,17 @@ public class ActivityInicio extends AppCompatActivity implements SelectListener 
                     case R.id.aprender:
                         //Intent irProAprender = new Intent(ActivityInicio.this, ActivityAprender.class);
                         //irProAprender.putExtra("idDoUsuario", idDoUsuario);
+                        //startActivity(irProAprender);
                         break;
                     case R.id.monitorar:
                         //Intent irProMonitorar = new Intent(ActivityInicio.this, ActivityMonitorar.class);
                         //irProMonitorar.putExtra("idDoUsuario", idDoUsuario);
+                        //startActivity(irProMonitorar);
                         break;
                     case R.id.conhecer:
                         Intent irProConhecer = new Intent(ActivityInicio.this, ActivityConhecerCandidatos.class);
                         irProConhecer.putExtra("idDoUsuario", idDoUsuario);
+                        startActivity(irProConhecer);
                         break;
                 }
 

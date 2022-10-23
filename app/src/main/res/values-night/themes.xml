@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.PoliticaOn" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#2C2A2E</item>
+        <item name="colorPrimary">#3B393C</item>
         <item name="colorPrimaryVariant">#009846</item>
         <item name="colorOnPrimary">@color/cinza_claro</item>
         <!-- Secondary brand color. -->
