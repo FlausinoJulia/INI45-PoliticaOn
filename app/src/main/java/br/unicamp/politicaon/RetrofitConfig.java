@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 // configurar o retrofit
 public class RetrofitConfig {
 
-     private static final String URL = "http://192.168.0.3:3000/usuarios/";
+    private static final String URL = "http://192.168.0.3:3000/usuarios/";
     //private static final String URL = "http://177.220.18.37:3000/usuarios/";
     private static Retrofit retrofit;
 

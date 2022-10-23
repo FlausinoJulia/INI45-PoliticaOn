@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".ActivityConhecerCandidatos">
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/menu_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/menu_horizontal"
+        android:background="@color/verde_titulo"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"/>
+
     <!-- logo -->
     <TextView
         android:id="@+id/logo"
@@ -28,6 +40,7 @@
     <!-- Presidente -->
 
     <LinearLayout
+        android:id="@+id/btnPresidente"
         android:layout_width="326dp"
         android:layout_height="56dp"
         android:layout_alignParentLeft="true"
@@ -55,7 +68,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/arrow_left"
+            android:id="@+id/setaPresidente"
             android:layout_width="60dp"
             android:layout_height="50dp"
             android:paddingLeft="500dp"
@@ -70,6 +83,7 @@
     <!-- Vice-Presidente -->
 
     <LinearLayout
+        android:id="@+id/btnVicePresidente"
         android:layout_width="326dp"
         android:layout_height="56dp"
         android:layout_alignParentLeft="true"
@@ -97,7 +111,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/arrowright2"
+            android:id="@+id/setaVicePresidente"
             android:layout_width="60dp"
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
@@ -111,6 +125,7 @@
     <!-- Dep.Fed -->
 
     <LinearLayout
+        android:id="@+id/btnDeputadoFederal"
         android:layout_width="326dp"
         android:layout_height="56dp"
         android:layout_alignParentLeft="true"
@@ -138,7 +153,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/arrowright3"
+            android:id="@+id/setaDeputadoFederal"
             android:layout_width="60dp"
             android:layout_height="50dp"
             android:paddingLeft="500dp"
@@ -152,6 +167,7 @@
     <!-- Senador -->
 
     <LinearLayout
+        android:id="@+id/btnSenador"
         android:layout_width="326dp"
         android:layout_height="56dp"
         android:layout_alignParentLeft="true"
@@ -179,7 +195,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/arrowright4"
+            android:id="@+id/setaSenador"
             android:layout_width="60dp"
             android:layout_height="50dp"
             android:paddingLeft="500dp"

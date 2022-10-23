@@ -44,5 +44,6 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0' // biblioteca JSON parser
 
     // api news
-    implementation 'com.squareup.picasso:picasso:2.8' // biblioteca picasso para mexer com imagens
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    // biblioteca picasso para mexer com imagens
 }
