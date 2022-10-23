@@ -5,6 +5,7 @@ import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -46,7 +47,7 @@ public class ActivityLogin extends AppCompatActivity {
                 if (edtEmailLogin.getText().toString().isEmpty()
                         || edtSenhaLogin.getText().toString().isEmpty())
                 {
-                    Toast.makeText(ActivityLogin.this, "Preencha todos os campos obrigatórios", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ActivityLogin.this, "Preencha todos os campos", Toast.LENGTH_LONG).show();
                 }
                 else
                 {
@@ -76,13 +77,17 @@ public class ActivityLogin extends AppCompatActivity {
                     Toast.makeText(ActivityLogin.this, "Senha incorreta!", Toast.LENGTH_LONG).show();
                 else {
                     Toast.makeText(ActivityLogin.this, "Login realizado com sucesso!", Toast.LENGTH_LONG).show();
-                    // int idDoUserLogado = response.body()
+                    int idDoUsuario = response.body().getId();
+                    Intent intent = new Intent(ActivityLogin.this, ActivityInicio.class);
+                    intent.putExtra("idDoUsuario", idDoUsuario);
+                    startActivity(intent);
                 }
             }
 
             @Override
             public void onFailure(Call<Usuario> call, Throwable t) {
-
+                Toast.makeText(ActivityLogin.this, "Não foi possível realizar o login", Toast.LENGTH_LONG).show();
+                Log.e("erroDeConexao", t.getMessage());
             }
         });
     }

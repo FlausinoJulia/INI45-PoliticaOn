@@ -27,20 +27,23 @@
             android:name=".ActivityPerfilCandidato"
             android:exported="false" />
         <activity
-            android:name=".ActivityLogin"
+            android:name=".DetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityCadastro"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".ActivityCadastro"
+            android:name=".ActivityInicio"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityLogin"
             android:exported="false" />
         <activity
             android:name=".ActivityBemVindo"
-            android:exported="false" />
-        <activity
-            android:name=".ActivityInicio"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

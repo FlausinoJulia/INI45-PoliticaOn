@@ -67,13 +67,4 @@ public class ActivityInicio extends AppCompatActivity implements SelectListener 
         startActivity(new Intent(ActivityInicio.this, DetailsActivity.class)
                 .putExtra("data", headlines));
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-
-        // inflate para transformar o xml do menu em uma view
-        // getMenuInflater().inflate();
-
-        return super.onCreateOptionsMenu(menu);
-    }
 }
