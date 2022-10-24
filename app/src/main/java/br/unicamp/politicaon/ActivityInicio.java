@@ -40,7 +40,6 @@ public class ActivityInicio extends AppCompatActivity implements SelectListener 
         RequestManager manager = new RequestManager(this);
         manager.getNewsHeadlines(listener, "eleicoes");
 
-        menu = findViewById(R.id.menu);
         // para pegar o id do usuario logado
         Intent intent = getIntent();
         idDoUsuario = intent.getIntExtra("idDoUsuario", -1);
