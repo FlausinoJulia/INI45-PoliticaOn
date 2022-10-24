@@ -39,13 +39,12 @@ public class ActivityConhecerCandidatos extends AppCompatActivity {
                         //Intent irProMonitorar = new Intent(ActivityInicio.this, ActivityMonitorar.class);
                         //irProMonitorar.putExtra("idDoUsuario", idDoUsuario);
                         break;
-                    /*case R.id.inicio:
+                    case R.id.inicio:
                         Intent irProInicio = new Intent(ActivityConhecerCandidatos.this, ActivityInicio.class);
-                        // irProInicio.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                         irProInicio.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         irProInicio.putExtra("idDoUsuario", idDoUsuario);
                         startActivity(irProInicio);
-                        break;*/
+                        break;
                 }
 
                 return true;

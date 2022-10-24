@@ -55,9 +55,9 @@ public class ActivityInicio extends AppCompatActivity implements SelectListener 
                 switch (item.getItemId())
                 {
                     case R.id.aprender:
-                        //Intent irProAprender = new Intent(ActivityInicio.this, ActivityAprender.class);
-                        //irProAprender.putExtra("idDoUsuario", idDoUsuario);
-                        //startActivity(irProAprender);
+                        Intent irProAprender = new Intent(ActivityInicio.this, ActivityAprender.class);
+                        irProAprender.putExtra("idDoUsuario", idDoUsuario);
+                        startActivity(irProAprender);
                         break;
                     case R.id.monitorar:
                         //Intent irProMonitorar = new Intent(ActivityInicio.this, ActivityMonitorar.class);
