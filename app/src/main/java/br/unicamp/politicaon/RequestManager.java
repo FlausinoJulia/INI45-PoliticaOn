@@ -3,8 +3,11 @@ package br.unicamp.politicaon;
 import android.content.Context;
 import android.widget.Toast;
 
+import java.util.List;
+
 import br.unicamp.politicaon.Models.NewsApiResponse;
 
+import br.unicamp.politicaon.Models.NewsHeadLines;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -34,7 +37,19 @@ public class RequestManager {
                             if(!response.isSuccessful()){
                                 Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show();
                             }
-                            listener.onFetchData(response.body().getArticles(), response.message());
+
+                            // tirando notícias que não tenham imagem, ou titulo, ou fonte, ou url
+                            List<NewsHeadLines> list = response.body().getArticles();
+                            list.removeIf(headLine -> headLine == null ||
+                                    headLine.getSource() == null ||
+                                    headLine.getTitle() == null ||
+                                    headLine.getUrl() == null ||
+                                    headLine.getUrlToImage() == null ||
+                                    headLine.getTitle().equals("") ||
+                                    headLine.getUrl().equals("") ||
+                                    headLine.getUrlToImage().equals(""));
+
+                            listener.onFetchData(list, response.message());
                     }
 
                     @Override
@@ -54,7 +69,7 @@ public class RequestManager {
     }
     public interface CallNewsApi{
         @GET("everything")
-        Call <NewsApiResponse> callHeadlines(
+        Call<NewsApiResponse> callHeadlines(
                 //@Query("country") String country,
                 //@Query("category") String category,
                 @Query("q") String query,

@@ -2,7 +2,6 @@ package br.unicamp.politicaon;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -10,8 +9,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -29,10 +26,13 @@ public class ActivityInicio extends AppCompatActivity implements SelectListener 
     ProgressDialog dialog;
     BottomNavigationView menu;
 
+    int idDoUsuario;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
+
         dialog = new ProgressDialog(this);
         dialog.setTitle("Buscando notícias recentes");
         dialog.show();
@@ -41,31 +41,36 @@ public class ActivityInicio extends AppCompatActivity implements SelectListener 
         manager.getNewsHeadlines(listener, "eleicoes");
 
         menu = findViewById(R.id.menu);
+        // para pegar o id do usuario logado
+        Intent intent = getIntent();
+        idDoUsuario = intent.getIntExtra("idDoUsuario", -1);
 
+        Toast.makeText(this, idDoUsuario + "", Toast.LENGTH_SHORT).show();
+
+        menu = findViewById(R.id.menu_horizontal);
         menu.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                switch(item.getItemId())
+                switch (item.getItemId())
                 {
                     case R.id.aprender:
-
-                      //  Intent intent1 = new Intent(ActivityInicio.this, ActivityAprender.class)
-
-                        break;
-                    case R.id.conhecer:
-
-                        Intent intent2 = new Intent(ActivityInicio.this, ActivityConhecerCandidatos.class);
-                        startActivity(intent2);
-
+                        //Intent irProAprender = new Intent(ActivityInicio.this, ActivityAprender.class);
+                        //irProAprender.putExtra("idDoUsuario", idDoUsuario);
+                        //startActivity(irProAprender);
                         break;
                     case R.id.monitorar:
-
-                        // Intent intent3 = new Intent(ActivityInicio.this, ActivityPainelDeMonitoramento.class);
-                        // startActivity(intent3);
-
+                        //Intent irProMonitorar = new Intent(ActivityInicio.this, ActivityMonitorar.class);
+                        //irProMonitorar.putExtra("idDoUsuario", idDoUsuario);
+                        //startActivity(irProMonitorar);
+                        break;
+                    case R.id.conhecer:
+                        Intent irProConhecer = new Intent(ActivityInicio.this, ActivityConhecerCandidatos.class);
+                        irProConhecer.putExtra("idDoUsuario", idDoUsuario);
+                        startActivity(irProConhecer);
                         break;
                 }
+
                 return true;
             }
         });

@@ -7,16 +7,17 @@
     tools:context=".ActivityConhecerCandidatos">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/menu"
+
+        android:id="@+id/menu_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/menu_horizontal"
         android:background="@color/verde_titulo"
         app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:itemTextColor="@color/white"/>
 
     <!-- logo -->
     <TextView
@@ -38,10 +39,11 @@
         app:layout_constraintVertical_bias="0.022" />
 
     <!-- Presidente -->
-
     <LinearLayout
+        android:id="@+id/btnPresidente"
         android:layout_width="326dp"
         android:layout_height="56dp"
+        android:onClick="clickCargo"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,7 +55,7 @@
         android:background="@drawable/viewconhecercand">
 
         <TextView
-            android:layout_width="256dp"
+            android:layout_width="271dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:paddingLeft="30dp"
@@ -67,35 +69,38 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/arrow_left"
+            android:id="@+id/setaPresidente"
+            android:onClick="clickCargo"
             android:layout_width="60dp"
             android:layout_height="50dp"
             android:paddingLeft="500dp"
             android:paddingRight="10dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
+            android:layout_gravity="center"
             android:background="@drawable/rightarrow"
             android:clipToOutline="true" />
 
     </LinearLayout>
 
     <!-- Vice-Presidente -->
-
     <LinearLayout
+        android:id="@+id/btnVicePresidente"
         android:layout_width="326dp"
         android:layout_height="56dp"
+        android:onClick="clickCargo"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:background="@drawable/viewconhecercand"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/viewconhecercand"
-        app:layout_constraintVertical_bias="0.253">
+        app:layout_constraintVertical_bias="0.247">
 
         <TextView
-            android:layout_width="256dp"
+            android:layout_width="271dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:paddingLeft="30dp"
@@ -109,38 +114,43 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/arrowright2"
+
+            android:id="@+id/setaVicePresidente"
             android:layout_width="60dp"
             android:layout_height="match_parent"
+            android:onClick="clickCargo"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
+            android:layout_gravity="center"
             android:background="@drawable/rightarrow"
             android:clipToOutline="true"
             android:paddingLeft="500dp"
             android:paddingRight="10dp" />
+
     </LinearLayout>
 
     <!-- Dep.Fed -->
-
     <LinearLayout
+        android:id="@+id/btnDeputadoFederal"
         android:layout_width="326dp"
         android:layout_height="56dp"
+        android:onClick="clickCargo"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:background="@drawable/viewconhecercand"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
-        android:background="@drawable/viewconhecercand"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.376">
+        app:layout_constraintVertical_bias="0.365">
 
         <TextView
-            android:layout_width="256dp"
+            android:layout_width="271dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:paddingLeft="30dp"
-            android:text="Deputado Federal"
+            android:text="Deputado Estadual"
             android:textColor="@color/white"
             android:textSize="19dp"
             android:textStyle="bold"
@@ -150,34 +160,38 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/arrowright3"
+            android:id="@+id/setaDeputadoFederal"
             android:layout_width="60dp"
             android:layout_height="50dp"
+            android:onClick="clickCargo"
             android:paddingLeft="500dp"
             android:paddingRight="10dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
+            android:layout_gravity="center"
             android:background="@drawable/rightarrow"
             android:clipToOutline="true" />
+
     </LinearLayout>
 
     <!-- Senador -->
-
     <LinearLayout
+        android:id="@+id/btnSenador"
         android:layout_width="326dp"
         android:layout_height="56dp"
+        android:onClick="clickCargo"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:background="@drawable/viewconhecercand"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
-        android:background="@drawable/viewconhecercand"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499">
+        app:layout_constraintVertical_bias="0.48">
 
         <TextView
-            android:layout_width="254dp"
+            android:layout_width="271dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:paddingLeft="30dp"
@@ -191,16 +205,18 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/arrowright4"
+            android:id="@+id/setaSenador"
             android:layout_width="60dp"
             android:layout_height="50dp"
+            android:onClick="clickCargo"
             android:paddingLeft="500dp"
             android:paddingRight="10dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
+            android:layout_gravity="center"
             android:background="@drawable/rightarrow"
             android:clipToOutline="true" />
-    </LinearLayout>
 
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

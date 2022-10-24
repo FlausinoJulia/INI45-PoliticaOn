@@ -77,8 +77,11 @@ public class ActivityCadastro extends AppCompatActivity {
             public void onResponse(Call<Usuario> call, Response<Usuario> response) {
 
                 if (response.code() == 400)
-                    // verificar se funciona o response.message
-                    Toast.makeText(ActivityCadastro.this, response.message(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(ActivityCadastro.this, "Preencha todos os campos obrigatórios!", Toast.LENGTH_LONG).show();
+                else if (response.code() == 422)
+                    Toast.makeText(ActivityCadastro.this, "Email inválido!", Toast.LENGTH_LONG).show();
+                else if (response.code() == 409)
+                    Toast.makeText(ActivityCadastro.this, "Essse email já está cadastrado!", Toast.LENGTH_LONG).show();
                 else {
                     Toast.makeText(ActivityCadastro.this, "Cadastro realizado!", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(ActivityCadastro.this, ActivityLogin.class);

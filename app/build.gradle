@@ -43,10 +43,11 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'       // biblioteca Retrofit para conexão com o backend
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0' // biblioteca JSON parser
 
-    // api news
-    implementation 'com.squareup.picasso:picasso:2.8' // biblioteca picasso para mexer com imagens
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'me.relex:circleindicator:2.1.6'
+    implementation 'org.imaginativeworld.whynotimagecarousel:whynotimagecarousel:2.1.0'
 
-    // para navegação no app
-    implementation 'androidx.navigation:navigation-fragment:2.5.2'
-    implementation 'androidx.navigation:navigation-ui:2.5.2'
+    // biblioteca picasso para mexer com imagens
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
 }
