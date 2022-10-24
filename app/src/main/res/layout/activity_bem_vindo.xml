@@ -7,6 +7,21 @@
     android:background="@drawable/fundo"
     tools:context=".ActivityBemVindo">
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCadastrese"
+        android:layout_width="201dp"
+        android:layout_height="48dp"
+        android:background="@drawable/btns"
+        android:text="Cadastre-se"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="19dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
     <TextView
         android:id="@+id/bem_vindo_a"
         android:layout_width="302dp"
@@ -23,7 +38,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.367" />
+        app:layout_constraintVertical_bias="0.385" />
 
     <TextView
         android:id="@+id/aprenda_pol"
@@ -39,22 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.411" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnCadastrese"
-        android:layout_width="201dp"
-        android:layout_height="48dp"
-        android:background="@drawable/btns"
-        android:text="Cadastre-se"
-        android:textColor="#FFFFFF"
-        android:textSize="19dp"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.48" />
+        app:layout_constraintVertical_bias="0.43" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLoginInicial"
@@ -62,14 +62,14 @@
         android:layout_height="48dp"
         android:background="@drawable/btns"
         android:text="Login"
+        android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="19dp"
-        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.569" />
+        app:layout_constraintVertical_bias="0.588" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

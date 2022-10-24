@@ -18,7 +18,6 @@ public class ActivityPerfilCandidato extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil_do_candidato);
 
-        setContentView(R.layout.activity_perfil_do_candidato);
         TextView nome_candidato  = findViewById(R.id.nome_candidato);
         TextView sigla_partido   = findViewById(R.id.sigla_partido);
         TextView cargo_candidato = findViewById(R.id.cargo_candidato);

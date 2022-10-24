@@ -5,6 +5,8 @@ import java.io.Serializable;
 
 public class Usuario implements Serializable
 {
+    @SerializedName("id")
+    private final int id;
     @SerializedName("nome")
     private String nome;
     @SerializedName("senha")
@@ -16,13 +18,14 @@ public class Usuario implements Serializable
 
     public Usuario(String nome, String senha, int idEstado, String email)
     {
-        // this.id = id;
+        this.id = 0;
         this.nome = nome;
         this.senha = senha;
         this.idEstado = idEstado;
         this.email = email;
     }
 
+    public int getId() { return this.id; }
     public String getNome() { return this.nome; }
     public String getSenha() { return this.senha; }
     public int getIdEstado() { return this.idEstado; }

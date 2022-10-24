@@ -1,5 +1,6 @@
 package br.unicamp.politicaon;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -7,14 +8,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.View;
-import android.widget.Button;
+import android.util.Log;
+import android.view.MenuItem;
 import android.widget.Toast;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 import br.unicamp.politicaon.Models.NewsApiResponse;
 import br.unicamp.politicaon.Models.NewsHeadLines;
 
+import java.util.Collections;
 import java.util.List;
 
 public class ActivityInicio extends AppCompatActivity implements SelectListener {
@@ -22,11 +26,14 @@ public class ActivityInicio extends AppCompatActivity implements SelectListener 
     RecyclerView recyclerView;
     CustomAdapter adapter;
     ProgressDialog dialog;
+    BottomNavigationView menu;
+    int idDoUsuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
+
         dialog = new ProgressDialog(this);
         dialog.setTitle("Buscando notícias recentes");
         dialog.show();
@@ -34,6 +41,39 @@ public class ActivityInicio extends AppCompatActivity implements SelectListener 
         RequestManager manager = new RequestManager(this);
         manager.getNewsHeadlines(listener, "eleicoes");
 
+        // para pegar o id do usuario logado
+        Intent intent = getIntent();
+        idDoUsuario = intent.getIntExtra("idDoUsuario", -1);
+
+        Toast.makeText(this, idDoUsuario + "", Toast.LENGTH_SHORT).show();
+
+        menu = findViewById(R.id.menu_horizontal);
+
+        menu.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId())
+                {
+                    case R.id.aprender:
+                        //Intent irProAprender = new Intent(ActivityInicio.this, ActivityAprender.class);
+                        //irProAprender.putExtra("idDoUsuario", idDoUsuario);
+                        //startActivity(irProAprender);
+                        break;
+                    case R.id.monitorar:
+                        //Intent irProMonitorar = new Intent(ActivityInicio.this, ActivityMonitorar.class);
+                        //irProMonitorar.putExtra("idDoUsuario", idDoUsuario);
+                        //startActivity(irProMonitorar);
+                        break;
+                    case R.id.conhecer:
+                        Intent irProConhecer = new Intent(ActivityInicio.this, ActivityConhecerCandidatos.class);
+                        irProConhecer.putExtra("idDoUsuario", idDoUsuario);
+                        startActivity(irProConhecer);
+                        break;
+                }
+
+                return true;
+            }
+        });
     }
 
     private final OnFetchDataListener<NewsApiResponse> listener =
@@ -66,14 +106,5 @@ public class ActivityInicio extends AppCompatActivity implements SelectListener 
     public void OnNewsClicked(NewsHeadLines headlines) {
         startActivity(new Intent(ActivityInicio.this, DetailsActivity.class)
                 .putExtra("data", headlines));
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-
-        // inflate para transformar o xml do menu em uma view
-        // getMenuInflater().inflate();
-
-        return super.onCreateOptionsMenu(menu);
     }
 }

@@ -44,6 +44,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0' // biblioteca JSON parser
 
     // api news
+<<<<<<< HEAD
     implementation 'com.squareup.picasso:picasso:2.8' // biblioteca picasso para mexer com imagens
 
     // Material Components for Android. Replace the version with the latest version of Material Components library.
@@ -53,4 +54,8 @@ dependencies {
     implementation 'me.relex:circleindicator:2.1.6'
 
     implementation 'org.imaginativeworld.whynotimagecarousel:whynotimagecarousel:2.1.0'
+=======
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    // biblioteca picasso para mexer com imagens
+>>>>>>> 06a26e839c42a738747cfd0b4e64f2e05855cd15
 }
