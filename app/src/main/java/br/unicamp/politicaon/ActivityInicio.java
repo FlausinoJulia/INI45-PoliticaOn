@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -17,6 +18,7 @@ import com.google.android.material.navigation.NavigationBarView;
 import br.unicamp.politicaon.Models.NewsApiResponse;
 import br.unicamp.politicaon.Models.NewsHeadLines;
 
+import java.util.Collections;
 import java.util.List;
 
 public class ActivityInicio extends AppCompatActivity implements SelectListener {
@@ -25,7 +27,6 @@ public class ActivityInicio extends AppCompatActivity implements SelectListener 
     CustomAdapter adapter;
     ProgressDialog dialog;
     BottomNavigationView menu;
-
     int idDoUsuario;
 
     @Override
@@ -40,7 +41,6 @@ public class ActivityInicio extends AppCompatActivity implements SelectListener 
         RequestManager manager = new RequestManager(this);
         manager.getNewsHeadlines(listener, "eleicoes");
 
-        menu = findViewById(R.id.menu);
         // para pegar o id do usuario logado
         Intent intent = getIntent();
         idDoUsuario = intent.getIntExtra("idDoUsuario", -1);
@@ -48,10 +48,10 @@ public class ActivityInicio extends AppCompatActivity implements SelectListener 
         Toast.makeText(this, idDoUsuario + "", Toast.LENGTH_SHORT).show();
 
         menu = findViewById(R.id.menu_horizontal);
+
         menu.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
                 switch (item.getItemId())
                 {
                     case R.id.aprender:

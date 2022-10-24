@@ -78,9 +78,9 @@ public class ActivityLogin extends AppCompatActivity {
                 else {
                     Toast.makeText(ActivityLogin.this, "Login realizado com sucesso!", Toast.LENGTH_LONG).show();
                     int idDoUsuario = response.body().getId();
-                    Intent intent = new Intent(ActivityLogin.this, ActivityInicio.class);
+                   /* Intent intent = new Intent(ActivityLogin.this, ActivityInicio.class);
                     intent.putExtra("idDoUsuario", idDoUsuario);
-                    startActivity(intent);
+                    startActivity(intent);*/
                 }
             }
 
