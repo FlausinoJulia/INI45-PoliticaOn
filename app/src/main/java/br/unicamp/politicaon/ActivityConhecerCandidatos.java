@@ -32,8 +32,9 @@ public class ActivityConhecerCandidatos extends AppCompatActivity {
                 switch (item.getItemId())
                 {
                     case R.id.aprender:
-                        //Intent irProAprender = new Intent(ActivityInicio.this, ActivityAprender.class);
-                        //irProAprender.putExtra("idDoUsuario", idDoUsuario);
+                        Intent irProAprender = new Intent(ActivityConhecerCandidatos.this, ActivityAprender.class);
+                        irProAprender.putExtra("idDoUsuario", idDoUsuario);
+                        startActivity(irProAprender);
                         break;
                     case R.id.monitorar:
                         //Intent irProMonitorar = new Intent(ActivityInicio.this, ActivityMonitorar.class);
@@ -59,15 +60,35 @@ public class ActivityConhecerCandidatos extends AppCompatActivity {
         {
             case R.id.btnPresidente:
             case R.id.setaPresidente:
+                Intent mostrarPresidentes = new Intent(ActivityConhecerCandidatos.this, ActivityCargo.class);
+                mostrarPresidentes.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                mostrarPresidentes.putExtra("idDoUsuario", idDoUsuario);
+                mostrarPresidentes.putExtra("cargoEscolhido", "PRESIDENTE");
+                startActivity(mostrarPresidentes);
                 break;
             case R.id.btnVicePresidente:
             case R.id.setaVicePresidente:
+                Intent mostrarVicePre = new Intent(ActivityConhecerCandidatos.this, ActivityCargo.class);
+                mostrarVicePre.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                mostrarVicePre.putExtra("idDoUsuario", idDoUsuario);
+                mostrarVicePre.putExtra("cargoEscolhido", "VICE PRESIDENTE");
+                startActivity(mostrarVicePre);
                 break;
             case R.id.btnDeputadoFederal:
             case R.id.setaDeputadoFederal:
+                Intent mostrarDepFederal = new Intent(ActivityConhecerCandidatos.this, ActivityCargo.class);
+                mostrarDepFederal.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                mostrarDepFederal.putExtra("idDoUsuario", idDoUsuario);
+                mostrarDepFederal.putExtra("cargoEscolhido", "DEPUTADO FEDERAL");
+                startActivity(mostrarDepFederal);
                 break;
             case R.id.btnSenador:
             case R.id.setaSenador:
+                Intent mostrarSenadores = new Intent(ActivityConhecerCandidatos.this, ActivityCargo.class);
+                mostrarSenadores.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                mostrarSenadores.putExtra("idDoUsuario", idDoUsuario);
+                mostrarSenadores.putExtra("cargoEscolhido", "SENADOR");
+                startActivity(mostrarSenadores);
                 break;
         }
     }

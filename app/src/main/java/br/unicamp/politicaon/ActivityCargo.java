@@ -15,10 +15,21 @@ public class ActivityCargo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cargo);
 
-        Intent intent = getIntent();
-        intent.getIntExtra("idDoUsuario", -1);
-        intent.getStringExtra("cargoEscolhido");
+        Intent intent  = getIntent();
+        idDoUsuario    = intent.getIntExtra("idDoUsuario", -1);
+        cargoEscolhido = intent.getStringExtra("cargoEscolhido");
 
+        switch (cargoEscolhido)
+        {
+            case "PRESIDENTE":
+                break;
+            case "VICE PRESIDENTE":
+                break;
+            case "DEPUTADO FEDERAL":
+                break;
+            case "SENADOR":
+                break;
+        }
         // exibir todos os candidatos cadastrados que são do cargo escolhido pelo usuário
     }
 }

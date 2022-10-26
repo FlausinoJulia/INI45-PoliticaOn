@@ -51,10 +51,10 @@
             android:name=".ActivityCadastro"
             android:exported="false" />
         <activity
-            android:name=".ActivityPerfilCandidato"
+            android:name=".ActivityBemVindo"
             android:exported="false" />
         <activity
-            android:name=".ActivityBemVindo"
+            android:name=".ActivityPerfilCandidato"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

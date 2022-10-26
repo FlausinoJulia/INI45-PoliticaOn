@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 
 public class ActivityPerfilCandidato extends AppCompatActivity {
 
@@ -29,9 +30,9 @@ public class ActivityPerfilCandidato extends AppCompatActivity {
         InputStream is = getResources().openRawResource(R.raw.data);
         BufferedReader br = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
         String line = "";
+        ArrayList<String> candidatos = new ArrayList<>();
 
         try {
-            br.readLine();
             String[] cols = br.readLine().split(";");
 
             if(cols.length > 0
@@ -47,7 +48,6 @@ public class ActivityPerfilCandidato extends AppCompatActivity {
                 genero.setText(genero.getText() + cols[8]); */
 
                 nome_candidato.setText(cols[0] + cols[1]  + cols[2]);
-                // nome_candidato.setText(cols[0]);
                 sigla_partido.setText(cols[3]);
                 cargo_candidato.setText(cols[4]);
                 cpf_cnpj.setText(cols[5]);
