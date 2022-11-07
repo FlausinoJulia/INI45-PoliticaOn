@@ -148,6 +148,7 @@ public class ActivityConhecerCandidatos extends AppCompatActivity {
                 Intent mostrarPresidentes = new Intent(ActivityConhecerCandidatos.this, ActivityCargo.class);
                 mostrarPresidentes.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 mostrarPresidentes.putExtra("idDoUsuario", idDoUsuario);
+                mostrarPresidentes.putExtra("cargoEscolhido", "PRESIDENTE");
                 mostrarPresidentes.putParcelableArrayListExtra("listaPresidentes", presidentes);
                 startActivity(mostrarPresidentes);
 
@@ -210,7 +211,7 @@ public class ActivityConhecerCandidatos extends AppCompatActivity {
                 mostrarSenadores.putExtra("cargoEscolhido", "SENADOR");
                 mostrarSenadores.putParcelableArrayListExtra("listaSenadores", senadores);
                 startActivity(mostrarSenadores);
-                
+
                 break;
         }
     }

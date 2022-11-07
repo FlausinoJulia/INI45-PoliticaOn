@@ -1,8 +1,10 @@
 package br.unicamp.politicaon;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import android.os.Bundle;
+import android.view.View;
 
 import org.imaginativeworld.whynotimagecarousel.ImageCarousel;
 import org.imaginativeworld.whynotimagecarousel.model.CarouselItem;
@@ -57,5 +59,14 @@ public class ActivityAprender extends AppCompatActivity {
 
         carousel.setData(list);
 
+        AppCompatButton btnVoltarAprender;
+
+        btnVoltarAprender = findViewById(R.id.btnVoltarAprender);
+        btnVoltarAprender.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish(); // terminamos essa activity e voltamos para a passada
+            }
+        });
     }
 }

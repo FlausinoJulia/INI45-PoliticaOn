@@ -1,8 +1,12 @@
 package br.unicamp.politicaon;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
@@ -14,49 +18,59 @@ import java.util.ArrayList;
 
 public class ActivityPerfilCandidato extends AppCompatActivity {
 
+    int idDoUsuario;
+    Candidato candidato;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil_do_candidato);
 
+        AppCompatButton btnVoltarPerfilCand;
+
+        ImageView foto_candid    = (ImageView)findViewById(R.id.foto_candid);
         TextView nome_candidato  = findViewById(R.id.nome_candidato);
         TextView sigla_partido   = findViewById(R.id.sigla_partido);
         TextView cargo_candidato = findViewById(R.id.cargo_candidato);
-        TextView cpf_cnpj        = findViewById(R.id.cpf_cnpj);
-        TextView grau_instrucao  = findViewById(R.id.grau_instrucao);
-        TextView cor_raca        = findViewById(R.id.cor_raca);
-        TextView genero          =  findViewById(R.id.genero);
 
-        InputStream is = getResources().openRawResource(R.raw.data);
-        BufferedReader br = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
-        String line = "";
-        ArrayList<String> candidatos = new ArrayList<>();
+        // dados gerais
+        TextView text_nomeCompleto  = findViewById(R.id.text_nomeCompleto);
+        TextView text_numCandidato  = findViewById(R.id.text_numCandidato);
+        TextView text_numPartido    = findViewById(R.id.text_numPartido);
+        TextView text_grauIntrucao  = findViewById(R.id.text_grauIntrucao);
+        TextView text_cpfCnpj       =  findViewById(R.id.text_cpfCnpj);
+        TextView text_genero        =  findViewById(R.id.text_genero);
+        TextView text_corRaca       =  findViewById(R.id.text_corRaca);
 
-        try {
-            String[] cols = br.readLine().split(";");
+        Intent intent = getIntent();
+        idDoUsuario = intent.getIntExtra("idDoUsuario", -1);
+        candidato   = intent.getParcelableExtra("candidato");
 
-            if(cols.length > 0
-            ){
+        // setar foto_candid
+        nome_candidato.setText(candidato.getNome());
+        sigla_partido.setText(candidato.getSiglaPartido());
+        cargo_candidato.setText(candidato.getCargo());
 
-                /* nome_candidato.setText(nome_candidato.getText() + cols[0] + cols[1]  + cols[2] + "'");
-                nome_candidato.setText(nome_candidato.getText() + cols[0]);
-                sigla_partido.setText(sigla_partido.getText() + cols[3]);
-                cargo_candidato.setText(cargo_candidato.getText() + cols[4]);
-                cpf_cnpj.setText(cpf_cnpj.getText() + cols[5]);
-                grau_instrucao.setText(grau_instrucao.getText() + cols[6]);
-                cor_raca.setText(cor_raca.getText() + cols[7]);
-                genero.setText(genero.getText() + cols[8]); */
+        // dados gerais
+        text_nomeCompleto.setText(candidato.getNome());
 
-                nome_candidato.setText(cols[0] + cols[1]  + cols[2]);
-                sigla_partido.setText(cols[3]);
-                cargo_candidato.setText(cols[4]);
-                cpf_cnpj.setText(cols[5]);
-                grau_instrucao.setText(cols[6]);
-                cor_raca.setText(cols[7]);
-                genero.setText(cols[8]);
+        String numCand = candidato.getNumCandidato() + "";
+        text_numCandidato.setText(numCand);
+
+        String numPart = candidato.getNumPartido() + "";
+        text_numPartido.setText(numPart);
+
+        text_grauIntrucao.setText(candidato.getGrauInstrucao());
+        text_cpfCnpj.setText(candidato.getCpfOuCnpj());
+        text_genero.setText(candidato.getGenero());
+        text_corRaca.setText(candidato.getCorRaca());
+
+        btnVoltarPerfilCand = findViewById(R.id.btnVoltarPerfilCand);
+        btnVoltarPerfilCand.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish(); // terminamos essa activity e voltamos para a passada
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        });
     }
 }

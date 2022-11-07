@@ -6,7 +6,7 @@
 
     <LinearLayout
         android:id="@+id/viewCandidato"
-        android:layout_width="wrap_content"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
@@ -24,7 +24,8 @@
             android:layout_marginEnd="20dp"
             android:contentDescription="Foto do candidato"
             android:scaleType="fitCenter"
-            android:src="@drawable/cand" />
+            android:src="@drawable/candidato_default"
+            />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -38,7 +39,8 @@
                 android:layout_height="wrap_content"
                 android:text="Nome Completo do Candidato"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textAllCaps="false" />
 
             <TextView
                 android:id="@+id/tvPartidoCandidato"
