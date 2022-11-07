@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="br.unicamp.politicaon" >
+    package="br.unicamp.politicaon">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -15,31 +15,59 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PoliticaOn"
         android:usesCleartextTraffic="true"
-        tools:targetApi="31" >
+        tools:targetApi="31">
+        <activity
+            android:name=".Aprender.Aprender_CargosFuncoes"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Aprender.Aprender_Historia"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Aprender.Aprender_TipoVoto"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Aprender.Aprender_SistemaPolitico"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".Activities.ActivityCargo"
-            android:exported="false" >
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".Activities.ActivityAprender"
-            android:exported="false" >
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".Activities.DetailsActivity"
-            android:exported="false" >
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".Activities.ActivityPerfilCandidato"
-            android:exported="false" >
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -49,7 +77,7 @@
             android:exported="false" />
         <activity
             android:name=".Activities.ActivityLogin"
-            android:exported="false" >
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -58,11 +86,11 @@
             android:name=".Activities.ActivityConhecerCandidatos"
             android:exported="false" />
         <activity
-            android:name=".Activities.ActivityBemVindo"
+            android:name=".Activities.ActivityCadastro"
             android:exported="false" />
         <activity
-            android:name=".Activities.ActivityCadastro"
-            android:exported="true" >
+            android:name=".Activities.ActivityBemVindo"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

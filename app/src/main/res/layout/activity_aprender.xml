@@ -74,6 +74,8 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/tema_sistemaPolitico"
+                android:onClick="clickAprender"
                 android:layout_width="326dp"
                 android:layout_height="56dp"
                 android:layout_alignParentLeft="true"
@@ -92,7 +94,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:paddingLeft="30dp"
-                    android:text="História da política brasileira"
+                    android:text="Sistema político brasileiro"
                     android:textColor="@color/white"
                     android:textSize="18dp"
                     android:textStyle="bold"
@@ -102,7 +104,6 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnVoltarAprender"
                     android:layout_width="51dp"
                     android:layout_height="43dp"
                     android:layout_alignParentLeft="true"
@@ -116,6 +117,8 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/tema_cargosFuncoes"
+                android:onClick="clickAprender"
                 android:layout_width="326dp"
                 android:layout_height="56dp"
                 android:layout_alignParentLeft="true"
@@ -135,7 +138,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:paddingLeft="30dp"
-                    android:text="Instituições políticas brasileiras"
+                    android:text="Cargos políticos e suas funções"
                     android:textColor="@color/white"
                     android:textSize="18dp"
                     android:textStyle="bold"
@@ -145,7 +148,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/arrow_left2"
+                    android:id="@+id/btnAprenderDois"
                     android:layout_width="51dp"
                     android:layout_height="43dp"
                     android:layout_alignParentLeft="true"
@@ -159,6 +162,8 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/tema_tipoVoto"
+                android:onClick="clickAprender"
                 android:layout_width="326dp"
                 android:layout_height="56dp"
                 android:layout_alignParentLeft="true"
@@ -177,7 +182,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:paddingLeft="30dp"
-                    android:text="Tipos de votos"
+                    android:text="Votos"
                     android:textColor="@color/white"
                     android:textSize="18dp"
                     android:textStyle="bold"
@@ -187,7 +192,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/arrow_left3"
+                    android:id="@+id/btnAprenderTres"
                     android:layout_width="51dp"
                     android:layout_height="43dp"
                     android:layout_alignParentLeft="true"
@@ -201,6 +206,8 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/tema_historia"
+                android:onClick="clickAprender"
                 android:layout_width="326dp"
                 android:layout_height="56dp"
                 android:layout_alignParentLeft="true"
@@ -220,7 +227,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:paddingLeft="30dp"
-                    android:text="Partidos políticos brasileiros"
+                    android:text="História política brasileira"
                     android:textColor="@color/white"
                     android:textSize="18dp"
                     android:textStyle="bold"
@@ -230,7 +237,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/arrow_left4"
+                    android:id="@+id/btnAprenderQuatro"
                     android:layout_width="51dp"
                     android:layout_height="43dp"
                     android:layout_alignParentLeft="true"
@@ -243,89 +250,7 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="326dp"
-                android:layout_height="56dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginBottom="17dp"
-                android:background="@drawable/viewconhecercand"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.494"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.994">
 
-                <TextView
-                    android:layout_width="271dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:paddingLeft="30dp"
-                    android:text=""
-                    android:textColor="@color/white"
-                    android:textSize="18dp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.275"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/arrow_left6"
-                    android:layout_width="51dp"
-                    android:layout_height="43dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_gravity="center"
-                    android:background="@drawable/rightarrow"
-                    android:clipToOutline="true"
-                    android:paddingLeft="500dp"
-                    android:paddingRight="10dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="326dp"
-                android:layout_height="56dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginBottom="17dp"
-                android:background="@drawable/viewconhecercand"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.494"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.885">
-
-                <TextView
-                    android:layout_width="271dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:paddingLeft="30dp"
-                    android:text=""
-                    android:textColor="@color/white"
-                    android:textSize="18dp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.275"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/arrow_left5"
-                    android:layout_width="51dp"
-                    android:layout_height="43dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_gravity="center"
-                    android:background="@drawable/rightarrow"
-                    android:clipToOutline="true"
-                    android:paddingLeft="500dp"
-                    android:paddingRight="10dp" />
-
-            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
