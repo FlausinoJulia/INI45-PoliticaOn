@@ -1,4 +1,4 @@
-package br.unicamp.politicaon;
+package br.unicamp.politicaon.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
@@ -11,6 +11,8 @@ import org.imaginativeworld.whynotimagecarousel.model.CarouselItem;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import br.unicamp.politicaon.R;
 
 public class ActivityAprender extends AppCompatActivity {
 

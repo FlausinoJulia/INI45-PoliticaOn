@@ -1,4 +1,4 @@
-package br.unicamp.politicaon;
+package br.unicamp.politicaon.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,17 +8,20 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
+import br.unicamp.politicaon.Adapters.CustomAdapter;
 import br.unicamp.politicaon.Models.NewsApiResponse;
 import br.unicamp.politicaon.Models.NewsHeadLines;
+import br.unicamp.politicaon.OnFetchDataListener;
+import br.unicamp.politicaon.R;
+import br.unicamp.politicaon.RequestManager;
+import br.unicamp.politicaon.SelectListener;
 
-import java.util.Collections;
 import java.util.List;
 
 public class ActivityInicio extends AppCompatActivity implements SelectListener {

@@ -1,4 +1,4 @@
-package br.unicamp.politicaon;
+package br.unicamp.politicaon.Adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -10,6 +10,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import br.unicamp.politicaon.Models.NewsHeadLines;
+import br.unicamp.politicaon.R;
+import br.unicamp.politicaon.SelectListener;
+
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

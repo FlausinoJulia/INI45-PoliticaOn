@@ -1,4 +1,4 @@
-package br.unicamp.politicaon;
+package br.unicamp.politicaon.Adapters;
 
 import android.content.ClipData;
 import android.view.View;
@@ -8,6 +8,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import br.unicamp.politicaon.R;
 
 public class CustomViewHolder extends RecyclerView.ViewHolder {
 

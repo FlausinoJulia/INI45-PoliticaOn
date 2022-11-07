@@ -1,7 +1,8 @@
-package br.unicamp.politicaon;
+package br.unicamp.politicaon.Services;
 
 import java.util.List;
 
+import br.unicamp.politicaon.Models.Usuario;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
@@ -16,7 +17,7 @@ public interface UsuarioService
     @GET("/usuarios")
     Call<List<Usuario>> getUsuarios();
 
-    // pesquisar o usuario pelo nome
+    // pesquisar o usuario pelo id
     @GET("/usuarios/{id}")
     Call<Usuario> getUsuario(@Path("id") int id);
 

@@ -1,4 +1,4 @@
-package br.unicamp.politicaon;
+package br.unicamp.politicaon.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
@@ -9,12 +9,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
+import br.unicamp.politicaon.Models.Candidato;
+import br.unicamp.politicaon.R;
 
 public class ActivityPerfilCandidato extends AppCompatActivity {
 

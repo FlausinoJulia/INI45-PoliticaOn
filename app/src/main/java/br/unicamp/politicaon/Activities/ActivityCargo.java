@@ -1,4 +1,4 @@
-package br.unicamp.politicaon;
+package br.unicamp.politicaon.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +16,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.List;
+
+import br.unicamp.politicaon.Adapters.AdapterCandidatos;
+import br.unicamp.politicaon.Models.Candidato;
+import br.unicamp.politicaon.R;
 
 public class ActivityCargo extends AppCompatActivity {
 

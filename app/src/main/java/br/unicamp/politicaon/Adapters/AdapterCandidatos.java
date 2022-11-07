@@ -1,4 +1,4 @@
-package br.unicamp.politicaon;
+package br.unicamp.politicaon.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,11 +14,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+import br.unicamp.politicaon.Activities.ActivityPerfilCandidato;
+import br.unicamp.politicaon.Models.Candidato;
+import br.unicamp.politicaon.R;
+
 public class AdapterCandidatos extends RecyclerView.Adapter<AdapterCandidatos.MyViewHolder>
 {
-    List<Candidato> listaCandidatos;
-    Context contexto;
-    int idDoUsuario;
+    private List<Candidato> listaCandidatos;
+    private Context contexto;
+    private int idDoUsuario;
 
     public AdapterCandidatos(Context contexto, List<Candidato> listaCandidatos, int idDoUsuario)
     {

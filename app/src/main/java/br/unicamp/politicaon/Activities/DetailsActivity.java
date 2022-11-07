@@ -1,4 +1,4 @@
-package br.unicamp.politicaon;
+package br.unicamp.politicaon.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import br.unicamp.politicaon.Models.NewsHeadLines;
+import br.unicamp.politicaon.R;
+
 import com.squareup.picasso.Picasso;
 
 public class DetailsActivity extends AppCompatActivity {

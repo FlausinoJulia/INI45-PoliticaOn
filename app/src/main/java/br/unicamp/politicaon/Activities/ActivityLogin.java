@@ -1,4 +1,4 @@
-package br.unicamp.politicaon;
+package br.unicamp.politicaon.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
@@ -11,6 +11,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import br.unicamp.politicaon.Models.Usuario;
+import br.unicamp.politicaon.R;
+import br.unicamp.politicaon.RetrofitConfig;
+import br.unicamp.politicaon.Services.UsuarioService;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

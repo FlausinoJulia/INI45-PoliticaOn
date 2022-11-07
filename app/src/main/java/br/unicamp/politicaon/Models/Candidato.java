@@ -1,4 +1,4 @@
-package br.unicamp.politicaon;
+package br.unicamp.politicaon.Models;
 
 import android.os.Parcel;
 import android.os.Parcelable;

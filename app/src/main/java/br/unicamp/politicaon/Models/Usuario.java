@@ -1,4 +1,4 @@
-package br.unicamp.politicaon;
+package br.unicamp.politicaon.Models;
 
 import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
